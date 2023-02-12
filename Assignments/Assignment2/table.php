@@ -1,5 +1,19 @@
 <?php
+$i = 1;
+$j = 1;
+$table = "<table border='1'>";
 
+while ($i <16){
+    $table .= "<tr>";
+    $j = 1;
+    while ($j < 6){
+        $table .= "<td> Row {$i} Cell {$j} <td>";
+        $j++;
+    }
+    $i++;
+    $table .= "</tr>";
+}
+$table .= "</table>"
 
 
 ?>
@@ -13,11 +27,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <title>Nested Loop</title>
+    <title>Table</title>
 </head>
 <body class="container">
     <?php  
-         
+     echo $table;    
     ?>
 </body>
 </html>
