@@ -1,6 +1,6 @@
 <?php 
-    
-    class Calculator{
+   
+   class Calculator{
 
         function add($num1, $num2){
             if(is_int($num1) && is_int($num2)){
