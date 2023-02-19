@@ -37,17 +37,17 @@
                 if($ops === '+'){
                     
                     $val = $this->add($num1, $num2);
-                    return "The sum of the numbers is $val .<br>";
+                    return "The sum of the numbers is : $val .<br>";
                     
                 }
                 else if($ops === '-'){
                     
                     $val = $this->subtract($num1, $num2);
-                    return "The difference of the numbers is $val .<br>";
+                    return "The difference of the numbers is : $val .<br>";
                 }
                 else if($ops === '*'){
                     $val = $this->multiply($num1, $num2);
-                    return "The product of the numbers is $val .<br>";
+                    return "The product of the numbers is : $val .<br>";
                     
                 }
                 else if($ops === '/'){
@@ -55,7 +55,7 @@
                         return "Can not divide by Zero. <br>";
                     }
                     $val = $this->divide($num1, $num2);
-                    return "The division of the numbers is $val .<br>";
+                    return "The division of the numbers is : $val .<br>";
                     
                 }
                 else{
