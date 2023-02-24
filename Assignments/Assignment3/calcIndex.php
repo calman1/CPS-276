@@ -8,7 +8,7 @@
   </head>
   <body>
   <?php
-require_once "Calculator.php";
+require_once "calculator.php";
 $Calculator = new Calculator();
 echo $Calculator->calc("/", 10, 0); //will output Cannot divide by zero
 echo $Calculator->calc("*", 10, 2); //will output The product of the numbers is 20
