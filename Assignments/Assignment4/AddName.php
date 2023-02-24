@@ -1,5 +1,5 @@
 <?php
-static $result = array();
+    static $result = array();
     if(isset($_POST['submit'])) {
         require_once "Class.php";
         $Addname = new Nameform($_POST["names"]);
