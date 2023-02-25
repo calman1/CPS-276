@@ -35,7 +35,7 @@
 </div>
 <div class="form-group">
     <label for="textareaName" class="form-label">List of Names: </label>
-    <textarea style="height: 500px;" class="form-control" id="namelist" name="namelist">
+    <textarea style="height: 500px;" class="form-control" id="names" name="names">
         <?php $i=0;
         while($i<count($result)){
             echo $result[$i++]."\n";
