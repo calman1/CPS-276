@@ -1,36 +1,33 @@
 <?php
-require_once '../classes/Pdo_methods.php';
 
-/* GET NAME TO BE ADDED TO DB */
-$data = json_decode($_POST['data']);
+require_once "../classes/Pdo_methods.php";
+
+$data = json_decode($_POST[$data]);
 $name = $data->name;
+$nameR = esplode(" ", $name);
+$name = "{$nameR[1]}, {$nameR[0]}";
 
-/* SWITCH FIRST AND LAST NAME, AND CONCATENATE INTO ONE STRING */
-$nameArr = explode(" ", $name);
-$name = $nameArr[1].", ".$nameArr[0];
-
-/* GET A PDO OBJECT */
 $pdo = new PdoMethods();
 
-/* CONSTRUCT OUR SQL AND BIND OUR VARIABLES */
 $sql = "INSERT INTO names (name) VALUES (:name)";
-$bindings = [[':name',$name,'str'],];
 
-/* EXECUTE OUR INSERT STATEMENT */
-$records = $pdo->otherBinded($sql,$bindings);
+$bindings = [
+    [":name", $name, "str"],
+];
 
-if ($records === "error") {
-    $response = (object) ['masterstatus' => 'error', 'msg'=>'Could not insert records into database.'];
+$records = $pdo->otherBinded($sql, $bindings);
+if($records === "error"){
+    $response = (object)[
+        "masterstatus" => "error",
+        "msg" => "could not add name to database"
+    ];
+    echo json_encode($response);
+} else{
+    $response = (object)[
+        "masterstatus" => "success",
+        "msg" => "$name added"
+    ];
     echo json_encode($response);
 }
-else {
-    $response = (object) ['masterstatus' => 'success', 'msg'=>"Name has been added"];
-    echo json_encode($response);
-}
-
-/*
-$response = (object) ['masterstatus' => 'success', 'msg'=>$name];
-echo json_encode($response);
-*/
 
 ?>
