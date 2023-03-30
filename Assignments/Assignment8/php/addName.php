@@ -24,7 +24,7 @@ if($records === "error"){
     echo json_encode($response);
 } else{
     $response = (object)[
-        "masterstatus" => "Success",
+        "masterstatus" => "success",
         "msg" => "$name Added"
     ];
     echo json_encode($response);
