@@ -6,7 +6,7 @@
     if($result == 'error') {
         $response = (object) [
             'masterstatus' => "error",
-            'msg' => "There was an error deleting the names",
+            'msg' => "Error deleting the names",
           ];
           echo json_encode($response);
     }else {
