@@ -25,7 +25,7 @@ if($records === "error"){
 } else{
     $response = (object)[
         "masterstatus" => "success",
-        "msg" => "$name Added"
+        "msg" => "$name Successfully added name to database"
     ];
     echo json_encode($response);
 }
