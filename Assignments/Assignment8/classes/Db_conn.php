@@ -9,7 +9,7 @@ class DatabaseConn {
     try {
 
       $dbHost = 'localhost';
-      $dbName = 'names';
+      $dbName = 'calman';
       $dbUsr = 'calman';
       $dbPass = 'hWeV5Y6xvfDY';
 
