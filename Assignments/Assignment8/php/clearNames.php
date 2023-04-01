@@ -10,7 +10,7 @@ $results = $pdo->otherNotBinded($sql);
 if($results === 'error'){
     $response = (object)[
         'masterstatus' => 'error',
-        'msg' => "could not delete names"
+        'msg' => "Error could not delete names"
     ];
 
     echo json_encode($response);
@@ -18,7 +18,7 @@ if($results === 'error'){
 } else{
     $response = (object)[
         'masterstatus' => 'success',
-        'msg' => "all names have been deleted"
+        'msg' => "Names have been deleted"
     ];
 
     echo json_encode($response);

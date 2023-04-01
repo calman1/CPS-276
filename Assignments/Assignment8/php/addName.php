@@ -20,7 +20,7 @@ $results = $pdo->otherBinded($sql, $bindings);
 if($results === 'error'){
     $response = (object)[
         'masterstatus' => 'error',
-        'msg' => "could not add name to database"
+        'msg' => "Error, could not add name to database"
     ];
 
     echo json_encode($response);
@@ -28,7 +28,7 @@ if($results === 'error'){
 } else{
     $response = (object)[
         'masterstatus' => 'success',
-        'msg' => "name added"
+        'msg' => "Name added"
     ];
 
     echo json_encode($response);
